@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <link href="css/package.css" rel="stylesheet" type="text/css" />
+  <link href="css/calender.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="func.js" defer></script>
+  <script src="calender.js" defer></script>
+  <title>UI Design</title>
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- left section -->
+  <div class="container">
+    <div class="left-section-background">
+      <div class="contain">
+        <div class="col-container">
+          <div class="ls-container-inside">
+            <div class="icon-text-container">
+              <!-- icon -->
+              <i class="fa-solid fa-box fa-xl fa-box-color"></i>
+              <!-- text -->
+              <span class="ls-text-color">Package Selection</span>
+            </div>
+            <!-- checkbox -->
+            <input type="checkbox" id="chk-pkg-sel" class="input-checkbox" disabled />
+          </div>
+          <div class="ls-container-inside">
+            <div class="icon-text-container">
+              <!-- icon -->
+              <i class="fa-solid fa-box fa-xl fa-box-color"></i>
+              <!-- text -->
+              <span class="ls-text-color">Package</span>
+            </div>
+            <!-- checkbox -->
+            <input type="checkbox" id="chk-pkg" class="input-checkbox" disabled />
+          </div>
+          <div class="ls-container-inside">
+            <div class="icon-text-container">
+              <!-- icon -->
+              <i class="fa-solid fa-box fa-xl fa-box-color"></i>
+              <!-- text -->
+              <span class="ls-text-color">Appointments</span>
+            </div>
+            <!-- checkbox -->
+            <input type="checkbox" class="input-checkbox" disabled />
+          </div>
+          <div class="ls-container-inside">
+            <div class="icon-text-container">
+              <!-- icon -->
+              <i class="fa-solid fa-box fa-xl fa-box-color"></i>
+              <!-- text -->
+              <span class="ls-text-color">Your Info</span>
+            </div>
+            <!-- checkbox -->
+            <input type="checkbox" class="input-checkbox" />
+          </div>
+        </div>
+        <div class="collapse-menu-container">
+          <hr class="thin-hr" />
+          <div class="inner-text-icon">
+            <!-- text -->
+            <span class="ls-footer-text">Collapse Menu</span>
+            <!-- icon -->
+            <div class="arrow-icon">
+              <i class="fa-solid fa-arrow-right fa-sm"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- right setion -->
+    <div class="right-section-background">
+      <div class="nav">
+        <h1 id="rightSectionTitle">Package Selection</h1>
+      </div>
+
+      <!-- Package Selection body container -->
+      <div class="form-body" id="pkg-sel">
+        <div class="rs-container package-container" id="budapestContent">
+          <div class="heading-secondtext">
+            <span class="text pkg-name">Budapest</span>
+            <ul class="list">
+              <li class="no-list-style">Deep Organizing</li>
+              <li>Simply Organizing</li>
+              <li>Decluttering</li>
+            </ul>
+          </div>
+          <div class="price-section">
+            <span class="pkg-price">$6,440.00</span>
+          </div>
+        </div>
+        <div class="rs-container package-container">
+          <div class="heading-secondtext">
+            <span class="text pkg-name">Dubai</span>
+            <ul class="list">
+              <li class="no-list-style">Deep Organizing</li>
+              <li>Simply Organizing</li>
+              <li>Decluttering</li>
+            </ul>
+          </div>
+          <div class="price-section">
+            <span class="pkg-price">$5,520.00</span>
+          </div>
+        </div>
+        <div class="rs-container package-container">
+          <div class="heading-secondtext">
+            <span class="text pkg-name">Finland</span>
+            <ul class="list">
+              <li class="no-list-style">Deep Organizing</li>
+              <li>Simply Organizing</li>
+              <li>Decluttering</li>
+            </ul>
+          </div>
+          <div class="price-section">
+            <span class="pkg-price">$3,680.00</span>
+          </div>
+        </div>
+        <div class="rs-container package-container">
+          <div class="heading-secondtext">
+            <span class="text pkg-name" id="pkg-name">Greece</span>
+            <ul class="list">
+              <li class="no-list-style">Deep Organizing</li>
+              <li>Simply Organizing</li>
+              <li>Decluttering</li>
+            </ul>
+          </div>
+          <div class="price-section">
+            <span class="pkg-price">$4,600.00</span>
+          </div>
+        </div>
+        <div class="rs-container package-container">
+          <div class="heading-secondtext">
+            <span class="text pkg-name">Nigeria</span>
+            <ul class="list">
+              <li class="no-list-style">Deep Organizing</li>
+              <li>Simply Organizing</li>
+              <li>Decluttering</li>
+            </ul>
+          </div>
+          <div class="price-section">
+            <span class="pkg-price">$7,700.00</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Package body container -->
+      <div class="form-body hidden" id="pkg">
+
+        <div class="selected-container">
+          <div class="heading-secondtext">
+            <span class="text" id="selected-pkg"></span>
+          </div>
+          <div class="price-section">
+            <span id="selected-pkg-price"></span>
+          </div>
+        </div>
+        <span id="services-span">All Services are booked separately.</span>
+
+        <span id="expiration-span">
+          <i class="fa fa-clock-o" style="font-size:24px"></i>
+          Expires after 4 days
+        </span>
+
+        <hr>
+
+        <h2 id="selected-pkg2"></h2>
+
+        <div class="card" id="myCard">
+          <div class="card-header" onclick="toggleCard()">
+            <div class="name-and">
+              <div class="profile-placeholder" id="deep-organizing">DO</div>
+              <h2>Deep Organizing</h2>
+            </div>
+            <span id="arrowIcon" style="font-size: 24px; color: black;">&#9660;</span>
+          </div>
+          <div class="line"></div>
+          <div style="display: none;" class="expandable-content" id="expandableContent">
+            <div class="employee-list">
+              <p id="heading_emp">Employees: </p>
+              <img src="employee1.jpg" alt="Employee 1">
+              <img src="employee2.jpg" alt="Employee 2">
+              <img src="employee3.jpg" alt="Employee 3">
+            </div>
+          </div>
+        </div>
+
+        <div class="card" id="simplyOrganizeCard">
+          <div class="card-header" onclick="toggleSimplyOrganize()">
+            <div class="name-and">
+              <div class="profile-placeholder" id="simply-organize">SO</div>
+              <h2>Simply Organize</h2>
+            </div>
+            <span id="simplyarrowIcon" style="font-size: 24px; color: black;">&#9660;</span>
+          </div>
+          <div class="line"></div>
+          <div style="display: none;" class="expandable-content" id="simplyexpandableContent">
+            <div class="employee-list">
+              <p id="heading_emp">Employees: </p>
+              <img src="employee1.jpg" alt="Employee 1">
+              <img src="employee2.jpg" alt="Employee 2">
+              <img src="employee3.jpg" alt="Employee 3">
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card" id="Decluttering">
+          <div class="card-header" onclick="toggleDecluttering()">
+            <div class="name-and">
+              <div class="profile-placeholder" id="decluttering">DC</div>
+              <h2>Decluttering</h2>
+            </div>
+            <span id="declutteringarrowIcon" style="font-size: 24px; color: black;">&#9660;</span>
+          </div>
+          <div class="line"></div>
+          <div style="display: none;" class="expandable-content" id="declutteringexpandableContent">
+            <div class="employee-list">
+              <p id="heading_emp">Employees: </p>
+              <img src="employee1.jpg" alt="Employee 1">
+              <img src="employee2.jpg" alt="Employee 2">
+              <img src="employee3.jpg" alt="Employee 3">
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+      <!-- Appointment body container -->
+      <div class="form-body hidden" id="appointments">
+        <div class="calendar-container">
+          <div class="month-year-container">
+            <select id="monthSelect"></select>
+            <select id="yearSelect"></select>
+            <button id="prevMonth">&lt;</button>
+            <button id="nextMonth">&gt;</button>
+          </div>
+          <div class="calendar" id="calendar"></div>
+        </div>
+
+      </div>
+
+
+      <div class="footer">
+        <button class="btn" id="btn-continue" onclick="continueButtonClick()" disabled>Continue</button>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>

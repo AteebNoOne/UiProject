@@ -1,0 +1,95 @@
+
+.calendar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .month-year-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+  }
+
+  .day {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+
+  .day-name {
+    text-align: center;
+    font-weight: bold;
+    padding: 30px;
+
+  }
+
+  .prev-month {
+    color: #999;
+  }
+
+  .current-month {
+    background-color: rgba(255, 192, 203, 0.603);
+    color: black;
+  }
+
+  .selected-date {
+    background-color: red;
+    color: #fff;
+  }
+
+  .clicked-date {
+    background-color: green;
+    color: #fff;
+  }
+
+#monthSelect{
+    margin-left: 2%;
+    margin-right: 2%;
+    padding: 16px;
+    border-radius: 10%;
+    border: 2px solid #000;
+    color: skyblue;
+    font-size: 24px;
+
+}  
+
+#yearSelect{
+    margin-left: 2%;
+    margin-right: 2%;
+    padding: 20px;
+    border-radius: 10%;
+    border: 2px solid #000;
+    color: skyblue;
+    font-size: 24px;
+}
+
+#prevMonth {
+    margin-left: 2%;
+    margin-right: 0%;
+    padding: 20px;
+    border-radius: 10% 0 0 10%;
+    border: 2px solid #000;
+    border-right: none; /* Remove right-side border */
+    color: black;
+    font-size: 24px;
+    background-color: white;
+}
+
+#nextMonth {
+    margin-left: 0%;
+    margin-right: 2%;
+    padding: 20px;
+    border-radius: 0 10% 10% 0; /* top-left, top-right, bottom-right, bottom-left */
+    border: 2px solid #000;
+    color: black;
+    font-size: 24px;
+    background-color: white;
+}
