@@ -11,6 +11,7 @@
 
 .visa-container .field-container:nth-of-type(2) {
     grid-area: number;
+    
 }
 
 .visa-container .field-container:nth-of-type(3) {
