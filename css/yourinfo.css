@@ -1,0 +1,101 @@
+.info-container {
+    justify-content: center;
+    margin: 2% 8%;
+}
+
+.info-form {
+    width: 100%;
+    max-width: 1000px;
+    font-size: 24px;
+    margin: 20px;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.info-form input::placeholder {
+    font-size: 24px;
+}
+
+.personal-info {
+    width: 50%;
+}
+
+.payment-info {
+    height: 50%;
+    width: 45%;
+    border: 1px solid #0000005d;
+    border-radius: 5%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Adjust the values based on your preference */
+}
+
+.payment-info h3{
+    margin-left: 3%;
+}
+
+.info-form img {
+    display: block;
+    margin-bottom: 8px;
+    max-width: 100%;
+    height: auto;
+}
+
+.info-form label {
+    display: none;
+    /* Hide labels */
+}
+
+.info-form input {
+    width: 100%;
+    border: 1px solid #000;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    font-size: 24px;
+}
+
+.package-details p {
+    margin-bottom: 8px;
+    margin-left: 3%;
+}
+
+
+
+.payment-methods {
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-methods input,
+.payment-methods img {
+    flex: 1;
+    /* Equal flex sizes for inputs and images */
+}
+
+.payment-methods img {
+    max-height: 80px;
+    /* Set a maximum height for the images */
+}
+
+.payment-methods label {
+    margin-right: 10px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.payment-option {
+    display: flex;
+}
+
+.payment-option img{
+    margin-left: 3%;
+}
+
+#error-txt{
+    text-align: center;
+    color: red;
+}
