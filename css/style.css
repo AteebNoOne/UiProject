@@ -7,6 +7,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
+  height: fit-content;
 }
 
 .container {
@@ -26,6 +27,7 @@ body {
 }
 
 .left-section-background {
+  max-width: fit-content;
   background-color: var(--theme-color);
   min-height: 90vh;
   max-height: 90vh;
@@ -33,7 +35,7 @@ body {
   border-bottom-left-radius: 10px;
   padding-left: 2rem; 
   padding-right: 2rem; 
-  transition: max-height 0.3s ease-in-out;
+  transition: max-width 3s ease-in-out;
 }
 
 #collapsable-menu-button-right{

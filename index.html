@@ -12,7 +12,11 @@
   <link href="css/payments.css" rel="stylesheet" type="text/css" />
   <link href="css/visa.css" rel="stylesheet" type="text/css" />
   <link href="css/stripe.css" rel="stylesheet" type="text/css" />
-  
+  <!-- Your custom CSS -->
+  <link rel="stylesheet" href="cal.css">
+
+
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -28,8 +32,8 @@
 <body>
   <!-- left section -->
   <div class="container">
-    <div class="left-section-background" >
-      <div class="contain" >
+    <div class="left-section-background">
+      <div class="contain">
         <div class="col-container" id="collapsable-menu">
           <div class="ls-container-inside">
             <div class="icon-text-container">
@@ -82,16 +86,16 @@
             <input type="checkbox" id="chk-payments" class="input-checkbox" />
           </div>
         </div>
-        <div class="collapse-menu-container" >
+        <div class="collapse-menu-container">
           <hr class="thin-hr" />
           <div class="inner-text-icon">
             <!-- text -->
             <span class="ls-footer-text" id="collapsable-menu-text">Collapse Menu</span>
             <!-- icon -->
-            <div class="arrow-icon" id="collapsable-menu-button-right" onclick="hideCollapsableMenu()">
+            <div class="arrow-icon" id="collapsable-menu-button-right" onclick="toggleCollapsableMenu()">
               <i class="fa-solid fa-arrow-right fa-sm"></i>
             </div>
-            <div class="arrow-icon" id="collapsable-menu-button-left" onclick="hideCollapsableMenu()">
+            <div class="arrow-icon" id="collapsable-menu-button-left" onclick="toggleCollapsableMenu()">
               <i class="fa-solid fa-arrow-left fa-sm"></i>
             </div>
           </div>
@@ -112,20 +116,20 @@
       <div class="form-body" id="pkg-sel">
         <div class="rs-container package-container" id="budapestContent">
           <div class="heading-secondtext">
-            <span class="text pkg-name">Budapest</span>
+            <span class="text pkg-name">The Beach Cottage</span>
             <ul class="list">
-              <li class="no-list-style">Deep Organizing</li>
+              <li class="no-list-style">8h</li>
               <li>Simply Organizing</li>
               <li>Decluttering</li>
             </ul>
           </div>
           <div class="price-section">
-            <span class="pkg-price">$6,440.00</span>
+            <span class="pkg-price">$440.00</span>
           </div>
         </div>
         <div class="rs-container package-container">
           <div class="heading-secondtext">
-            <span class="text pkg-name">Dubai</span>
+            <span class="text pkg-name">The Retreat</span>
             <ul class="list">
               <li class="no-list-style">Deep Organizing</li>
               <li>Simply Organizing</li>
@@ -133,12 +137,12 @@
             </ul>
           </div>
           <div class="price-section">
-            <span class="pkg-price">$5,520.00</span>
+            <span class="pkg-price">$1,239.00</span>
           </div>
         </div>
         <div class="rs-container package-container">
           <div class="heading-secondtext">
-            <span class="text pkg-name">Finland</span>
+            <span class="text pkg-name" id="pkg-name">Coligny Beach</span>
             <ul class="list">
               <li class="no-list-style">Deep Organizing</li>
               <li>Simply Organizing</li>
@@ -146,33 +150,7 @@
             </ul>
           </div>
           <div class="price-section">
-            <span class="pkg-price">$3,680.00</span>
-          </div>
-        </div>
-        <div class="rs-container package-container">
-          <div class="heading-secondtext">
-            <span class="text pkg-name" id="pkg-name">Greece</span>
-            <ul class="list">
-              <li class="no-list-style">Deep Organizing</li>
-              <li>Simply Organizing</li>
-              <li>Decluttering</li>
-            </ul>
-          </div>
-          <div class="price-section">
-            <span class="pkg-price">$4,600.00</span>
-          </div>
-        </div>
-        <div class="rs-container package-container">
-          <div class="heading-secondtext">
-            <span class="text pkg-name">Nigeria</span>
-            <ul class="list">
-              <li class="no-list-style">Deep Organizing</li>
-              <li>Simply Organizing</li>
-              <li>Decluttering</li>
-            </ul>
-          </div>
-          <div class="price-section">
-            <span class="pkg-price">$7,700.00</span>
+            <span class="pkg-price">$2,600.00</span>
           </div>
         </div>
       </div>
@@ -262,7 +240,7 @@
 
       <!-- Appointment body container -->
       <div class="form-body hidden" id="appointments">
-        <div class="calendar-container">
+        <!-- <div class="calendar-container">
           <div class="month-year-container">
             <select id="monthSelect"></select>
             <select id="yearSelect"></select>
@@ -270,8 +248,28 @@
             <button id="nextMonth">&gt;</button>
           </div>
           <div class="calendar" id="calendar"></div>
-        </div>
+        </div> -->
+        <div id="showcase-wrapper">
+          <div id="myCalendarWrapper"></div>
       </div>
+  
+  
+      <!-- jQuery -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <!-- Popper.js -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+      <!-- Bootstrap JS -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      <!-- jQuery InputMask -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
+      <!-- iziToast -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js"></script>
+  
+      <!-- Your custom JavaScript -->
+      <script src="cal.js"></script>
+
+      </div>
+
 
       <!-- Your Info body container -->
       <div class="info-container hidden" id="your-info">
@@ -343,9 +341,11 @@
           <form action="#" method="POST">
             <input type="hidden" name="token" />
             <div class="group">
-              <input style="width: 80%; margin-left: 2%;" type="text" id="address" name="card-num" placeholder="Card Number">
+              <input style="width: 80%; margin-left: 2%;" type="text" id="address" name="card-num"
+                placeholder="Card Number">
             </div>
-            <button style="width: 83%; margin-left: 2%;" class="stripe-button" type="submit">Pay <strong id="stripe-pay"></strong></button>
+            <button style="width: 83%; margin-left: 2%;" class="stripe-button" type="submit">Pay <strong
+                id="stripe-pay"></strong></button>
             <div class="outcome">
               <div class="error"></div>
               <div class="success">
@@ -357,8 +357,9 @@
 
         </div>
 
-        <div id="opt-paypal">            
-          <a class="paypal-button" href="https://www.paypal.com" target="_blank">Pay <strong id="paypalamnt"></strong> Now</a>
+        <div id="opt-paypal">
+          <a class="paypal-button" href="https://www.paypal.com" target="_blank">Pay <strong id="paypalamnt"></strong>
+            Now</a>
         </div>
 
         <div id="opt-visa">

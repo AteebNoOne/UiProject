@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const nextMonthBtn = document.getElementById('nextMonth');
     let selectedDates = [];
 
-    // Populate month and year options
     const months = [
       'January', 'February', 'March', 'April', 'May', 'June',
       'July', 'August', 'September', 'October', 'November', 'December'
@@ -28,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
       yearSelect.add(option);
     });
 
-    // Initial calendar render
+
     renderCalendar(new Date());
 
     // Event listeners for changing month and year

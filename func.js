@@ -1,7 +1,7 @@
 let selectedPackageContainer;
 let selectedpaymentMethod;
 
-function hideCollapsableMenu() {
+function toggleCollapsableMenu() {
   var collapsableMenu = document.getElementById("collapsable-menu");
   var collapsableMenuText = document.getElementById("collapsable-menu-text");
   var BtnRight = document.getElementById("collapsable-menu-button-right");
