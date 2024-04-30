@@ -22,7 +22,7 @@ body {
 }
 
 .left-section-background {
-  background-color: #b195d2;
+  background-color: #89B5E3;
   min-height: 90vh;
   max-height: 90vh;
   border-top-left-radius: 10px;
@@ -35,7 +35,7 @@ body {
 .ls-container-inside {
   display: flex;
   align-items: center;
-  background-color: #b69ad5;
+  background-color: #222A3F;
   margin: 10px 16px;
   padding: 16px;
   border-radius: 8px;
@@ -146,7 +146,7 @@ body {
 
 .rs-container:hover {
   cursor: pointer;
-  background-color: aqua;
+  background-color: #8DC63F;
 }
 
 .selected-container {
