@@ -1,6 +1,24 @@
 let selectedPackageContainer;
 let selectedpaymentMethod;
 
+function hideCollapsableMenu() {
+  var collapsableMenu = document.getElementById("collapsable-menu");
+  var collapsableMenuText = document.getElementById("collapsable-menu-text");
+  var BtnRight = document.getElementById("collapsable-menu-button-right");
+  var BtnLeft = document.getElementById("collapsable-menu-button-left");
+  if (collapsableMenu.style.display === "none") {
+    collapsableMenu.style.display = "block";
+    collapsableMenuText.style.display = "block";
+    BtnLeft.style.display =  "block";
+    BtnRight.style.display =  "none";
+  } else {
+    collapsableMenu.style.display = "none";
+    collapsableMenuText.style.display = "none";
+    BtnLeft.style.display =  "none";
+    BtnRight.style.display =  "block";
+  }
+}
+
 document.querySelectorAll(".package-container").forEach(function (packageContainer) {
   packageContainer.addEventListener("click", function () {
     const isSelected = packageContainer.classList.contains("selected");

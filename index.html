@@ -28,9 +28,9 @@
 <body>
   <!-- left section -->
   <div class="container">
-    <div class="left-section-background">
-      <div class="contain">
-        <div class="col-container">
+    <div class="left-section-background" >
+      <div class="contain" >
+        <div class="col-container" id="collapsable-menu">
           <div class="ls-container-inside">
             <div class="icon-text-container">
               <!-- icon -->
@@ -82,19 +82,25 @@
             <input type="checkbox" id="chk-payments" class="input-checkbox" />
           </div>
         </div>
-        <div class="collapse-menu-container">
+        <div class="collapse-menu-container" >
           <hr class="thin-hr" />
           <div class="inner-text-icon">
             <!-- text -->
-            <span class="ls-footer-text">Collapse Menu</span>
+            <span class="ls-footer-text" id="collapsable-menu-text">Collapse Menu</span>
             <!-- icon -->
-            <div class="arrow-icon">
+            <div class="arrow-icon" id="collapsable-menu-button-right" onclick="hideCollapsableMenu()">
               <i class="fa-solid fa-arrow-right fa-sm"></i>
+            </div>
+            <div class="arrow-icon" id="collapsable-menu-button-left" onclick="hideCollapsableMenu()">
+              <i class="fa-solid fa-arrow-left fa-sm"></i>
             </div>
           </div>
         </div>
       </div>
+
+
     </div>
+
 
     <!-- right setion -->
     <div class="right-section-background">
